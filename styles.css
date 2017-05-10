@@ -1,35 +1,15 @@
 /* Variabes */
-
-$orange: #ffa600;
-$grey:#f3f3f3;
-$white: #fff;
-$base-color:$orange;
-
 /* Mixin's */
-
-@mixin transition {
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-
-@mixin corners ($radius) {
-  -moz-border-radius: $radius;
-  -webkit-border-radius: $radius;
-  border-radius: $radius;
-  -khtml-border-radius: $radius;
-}
-
 body {
-  background: $base-color;
+  background: #ffa600;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   height: 100%;
 }
 
-.stopwatch_app_template {
+.wrapper {
   width: 800px;
   margin: 30px auto;
-  color: $white;
+  color: #fff;
   text-align: center;
 }
 
@@ -48,10 +28,13 @@ h3 {
 }
 
 button {
-  @include corners (5px);
-  background: $base-color;
-  color: $white;
-  border: solid 1px $white;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -khtml-border-radius: 5px;
+  background: #ffa600;
+  color: #fff;
+  border: solid 1px #fff;
   text-decoration: none;
   cursor: pointer;
   font-size: 1.2em;
@@ -59,12 +42,12 @@ button {
   width: 180px;
   margin: 10px;
   outline: none;
-  &:hover {
-    @include transition;
-    background: $white;
-    border: solid 1px $white;
-    color: $base-color;
-  }
 }
-
-/* https://codepen.io/cathydutton/pen/GBcvo/ */
+button:hover {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  background: #fff;
+  border: solid 1px #fff;
+  color: #ffa600;
+}
