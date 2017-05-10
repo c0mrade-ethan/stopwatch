@@ -96,6 +96,5 @@ var Stopwatch = function(template) {
 
 // create the stopwatch element
 var elem = document.getElementsByClassName("stopwatch_app_template")[0];
-var inst = "These are the instructions you stupid piece of shit.";
 
 new Stopwatch(elem);
